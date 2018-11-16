@@ -5,11 +5,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div class="content-wrapper">
     <div class="container-fluid">
+        <!-- Breadcrumbs **-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="<?= site_url('painel/') ?>">Painel</a>
+            </li>
+            <li class="breadcrumb-item active">Usuários</li>
+        </ol>
+        <!-- ** Breadcrumbs-->
         <div class="card">
             <div class="card-header">
                 <h3>Gerenciar Usuários</h3>
             </div>
-
             <div class="card-body">
                 <div class="card-title">
                     <?php if ($this->session->flashdata('success') != null) { ?>
@@ -18,7 +25,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         aria-hidden="true">&times;</span></button>
                             <i class="fa fa-check-circle fa-lg fa-fw"></i><span
                                     class="small"> <?= $this->session->flashdata('success') ?></span>
-
                         </div>
                     <?php } ?>
 
@@ -28,7 +34,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         aria-hidden="true">&times;</span></button>
                             <i class="fa fa-exclamation-circle fa-lg fa-fw"></i><span
                                     class="small"> <?= $this->session->flashdata('warning') ?></span>
-
                         </div>
                     <?php } ?>
 
@@ -38,7 +43,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         aria-hidden="true">&times;</span></button>
                             <i class="fa fa-times-circle fa-lg fa-fw"></i><span
                                     class="small"> <?= $this->session->flashdata('danger') ?></span>
-
                         </div>
                     <?php } ?>
 
@@ -46,13 +50,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     <?php if ($usuarios->num_rows() == 1) { ?>
                         <div>
-                            <div class="alert alert-info">
+                            <div class="alert bg-primary font-weight-bold">
                                 <?= $usuarios->num_rows() ?> registro encontrado
                             </div>
                         </div>
                     <?php } else { ?>
                         <div>
-                            <div class="alert alert-info">
+                            <div class="alert bg-primary font-weight-bold">
                                 <?= $usuarios->num_rows() ?> registros encontrados
                             </div>
                         </div>
