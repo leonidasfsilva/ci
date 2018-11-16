@@ -18,9 +18,14 @@ body {
 }
 
 a {
-	color: #003399;
+	color: rgba(17, 129, 255, 0.73);
 	background-color: transparent;
 	font-weight: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(3, 0, 255);
 }
 
 h1 {

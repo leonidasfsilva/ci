@@ -4,19 +4,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
 <div class="content-wrapper">
-    <?php echo validation_errors(); ?>
-
     <div class="container-fluid">
+        <!-- Breadcrumbs **-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="<?= site_url('painel/') ?>">Painel</a>
+            </li>
+            <li class="breadcrumb-item active">Chamados</li>
+        </ol>
+        <!-- ** Breadcrumbs-->
+        <?php echo validation_errors(); ?>
         <div class="card">
             <div class="card-header">
-                <div class="container-fluid">
-                    <span class="pull-left">
-                        <h4>Gerenciar chamados</h4>
-                    </span>
-                    <span class="pull-right">
-                        <a class="btn btn-outline-primary btn-sm" href="#"><i class="fa fa-plus fa-fw"></i>Abrir chamado</a>
-                    </span>
-                </div>
+                <h4>Gerenciamento de chamados</h4>
             </div>
 
             <div class="card-body">

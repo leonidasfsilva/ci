@@ -125,8 +125,10 @@ class CI_Exceptions {
 		}
 		else
 		{
-			$heading = '404 Page Not Found';
-			$message = 'The page you requested was not found.';
+			$heading = 'ERRO 404: Página não encontrada.';
+			$message = 'Ops... Parece que a página que você tentou acessar não existe.<br>';
+			$message .= 'Lamentamos o ocorrido, você pode retornar ao sistema clicando no link abaixo.<br>';
+			$message .= '<br><a href="/ci/login"><i class="fa fa-caret-left fa-fw"></i> <strong><< Retornar ao sistema</strong></a>';
 		}
 
 		// By default we log this, but allow a dev to skip it

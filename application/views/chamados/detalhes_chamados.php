@@ -5,6 +5,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div class="content-wrapper">
     <div class="container-fluid">
+        <!-- Breadcrumbs **-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="<?= site_url('painel/') ?>">Painel</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="<?= site_url('chamados/') ?>">Chamados</a>
+            </li>
+            <li class="breadcrumb-item active">Detalhes do chamado</li>
+        </ol>
+        <!-- ** Breadcrumbs-->
         <?php echo validation_errors();
         switch ($status->idstatuschamado) {
             case 0:

@@ -143,7 +143,7 @@ class chamados extends MY_ControllerLogin {
             redirect('/painel');
         }
     }
-/*
+
     public function _responder($idchamado)
     {
         if (($this->session->userdata('administradornivel') == 1) || ($this->session->userdata('administradornivel') == 2))
@@ -168,7 +168,7 @@ class chamados extends MY_ControllerLogin {
             redirect('/chamados');
         }
     }
-*/
+
     public function respondeChamado()
     {
         $respostachamado = $this->input->post('respostachamado');

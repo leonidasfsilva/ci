@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e1d83ecd-70da-437f-b297-dee1753b83fe" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Chamados.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Chamados.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/chamados/cadastrar_chamados.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/chamados/cadastrar_chamados.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/chamados/detalhes_chamados.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/chamados/detalhes_chamados.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/chamados/gerenciar_chamados.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/chamados/gerenciar_chamados.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/errors/html/error_404.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/errors/html/error_404.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/painel_tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/painel_tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/core/Exceptions.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/core/Exceptions.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="detalhes_chamados.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/chamados/detalhes_chamados.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="38" selection-start-line="10" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gerenciar_chamados.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/chamados/gerenciar_chamados.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cadastrar_chamados.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/chamados/cadastrar_chamados.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="responder_chamados.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/chamados/responder_chamados.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="40" column="131" selection-start-line="40" selection-start-column="131" selection-end-line="40" selection-end-column="131" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Chamados.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Chamados.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="146" column="21" selection-start-line="146" selection-start-column="21" selection-end-line="146" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MY_Controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/core/Controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1185">
+              <caret line="79" column="60" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Loader.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/core/Loader.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="13800">
+              <caret line="920" column="22" selection-start-line="920" selection-start-column="17" selection-end-line="920" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>nav-link-collapse</find>
+      <find>collapse</find>
+      <find>aria-expanded</find>
+      <find>.btn</find>
+      <find>.btn.disabled</find>
+      <find>showConfirm</find>
+      <find>confirm</find>
+      <find>succes</find>
+      <find>ConfirmButton</find>
+      <find>Invalid</find>
+      <find>invalid e</find>
+      <find>invalid</find>
+      <find>recuperarsenha</find>
+      <find>SweetAlert</find>
+      <find>sweetalert</find>
+      <find>novochamado</find>
+      <find>novos</find>
+      <find>getnovos</find>
+      <find>administrador_id</find>
+      <find>administrado</find>
+      <find>toggleNavPosition</find>
+      <find>toggle</find>
+      <find>$this-&gt;load-&gt;view('header.php');</find>
+      <find>metis</find>
+      <find>nav</find>
+      <find>navbar-dark</find>
+      <find>version</find>
+      <find>bg-dark</find>
+      <find>The page you requested was not found.</find>
+      <find>error</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>Categoria_model</replace>
+      <replace>Cliente_model</replace>
+      <replace>usuario</replace>
+      <replace>redefinirsenha</replace>
+      <replace>usuario_id</replace>
+      <replace>//$this-&gt;load-&gt;view('header.php');</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\wamp64\www\ci\application</dir>
+      <dir>C:\wamp64\www\ci</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/vendor/jquery/jquery.js" />
+        <option value="$PROJECT_DIR$/application/views/usuario_alterar_tpl.php" />
+        <option value="$PROJECT_DIR$/application/views/categorias_alterar_tpl.php" />
+        <option value="$PROJECT_DIR$/application/views/chamados/exemplo_chamados.php" />
+        <option value="$PROJECT_DIR$/application/models/Admin_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
+        <option value="$PROJECT_DIR$/application/views/recuperarsenha/alterar_senha.php" />
+        <option value="$PROJECT_DIR$/application/views/recuperarsenha/link_alteracao_senha.php" />
+        <option value="$PROJECT_DIR$/application/views/recuperarsenha/senha_alterada.php" />
+        <option value="$PROJECT_DIR$/application/views/recuperarsenha/esqueceu_sua_senha.php" />
+        <option value="$PROJECT_DIR$/dist/css/sweetalert2.css" />
+        <option value="$PROJECT_DIR$/dist/js/sweetalert2.min.js" />
+        <option value="$PROJECT_DIR$/dist/js/sweetalert2.js" />
+        <option value="$PROJECT_DIR$/application/controllers/Recuperarsenha.php" />
+        <option value="$PROJECT_DIR$/application/views/redefinirsenha/esqueceu_sua_senha.php" />
+        <option value="$PROJECT_DIR$/application/views/teste.php" />
+        <option value="$PROJECT_DIR$/dist/js/custom.js" />
+        <option value="$PROJECT_DIR$/dist/js/functions.js" />
+        <option value="$PROJECT_DIR$/dist/js/functions.php" />
+        <option value="$PROJECT_DIR$/application/views/redefinirsenha/alterar_senha.php" />
+        <option value="$PROJECT_DIR$/application/views/functions.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Redefinirsenha.php" />
+        <option value="$PROJECT_DIR$/application/views/usuario_cadastro_tpl.php" />
+        <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/views/welcome_message.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Login.php" />
+        <option value="$PROJECT_DIR$/application/views/chamados/responder_chamados.php" />
+        <option value="$PROJECT_DIR$/dist/css/sb-admin.css" />
+        <option value="$PROJECT_DIR$/application/views/admin/alterar_senha.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/meus_dados.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/gerenciar_admins.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/alterar_dados.php" />
+        <option value="$PROJECT_DIR$/application/views/categorias_cadastro_tpl.php" />
+        <option value="$PROJECT_DIR$/application/views/categorias_list_tpl.php" />
+        <option value="$PROJECT_DIR$/application/views/usuarios_list_tpl.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/cadastrar_admin.php" />
+        <option value="$PROJECT_DIR$/application/models/Chamados_model.php" />
+        <option value="$PROJECT_DIR$/application/views/chamados/listar_chamados_usuario.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Painel.php" />
+        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
+        <option value="$PROJECT_DIR$/application/views/login/login.php" />
+        <option value="$PROJECT_DIR$/application/views/header.php" />
+        <option value="$PROJECT_DIR$/application/views/footer.php" />
+        <option value="$PROJECT_DIR$/application/views/chamados/detalhes_chamados.php" />
+        <option value="$PROJECT_DIR$/application/views/painel_tpl.php" />
+        <option value="$PROJECT_DIR$/application/views/chamados/gerenciar_chamados.php" />
+        <option value="$PROJECT_DIR$/application/views/chamados/cadastrar_chamados.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Chamados.php" />
+        <option value="$PROJECT_DIR$/system/core/Exceptions.php" />
+        <option value="$PROJECT_DIR$/application/views/errors/html/error_404.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/font-awesome/css" />
+      <path value="$PROJECT_DIR$/vendor/bootstrap/css" />
+      <path value="$PROJECT_DIR$/vendor/font-awesome/fonts" />
+      <path value="$PROJECT_DIR$/vendor/font-awesome/scss" />
+      <path value="$PROJECT_DIR$/vendor/bootstrap/js" />
+      <path value="$PROJECT_DIR$/vendor/font-awesome/less" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="chamados" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="errors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="errors" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ci" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mapos" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ci\application\views" />
+      <recent name="C:\wamp64\www\ci\application\controllers" />
+      <recent name="C:\wamp64\www\ci\application\views\recuperar-senha" />
+      <recent name="C:\wamp64\www\ci\application\views\login" />
+      <recent name="C:\wamp64\www\ci\application\views\admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ci\application\views\admin" />
+      <recent name="C:\wamp64\www\ci\application\views\chamados" />
+      <recent name="C:\wamp64\www\ci\vendor\bootstrap\js" />
+      <recent name="C:\wamp64\www\ci\application\controllers" />
+      <recent name="C:\wamp64\www\ci\application\models" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e1d83ecd-70da-437f-b297-dee1753b83fe" name="Default" comment="" />
+      <created>1516881520792</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1516881520792</updated>
+      <workItem from="1516881522161" duration="12477000" />
+      <workItem from="1516923352480" duration="71000" />
+      <workItem from="1516923670199" duration="3926000" />
+      <workItem from="1517097612663" duration="33291000" />
+      <workItem from="1517177647801" duration="9467000" />
+      <workItem from="1517268235124" duration="34539000" />
+      <workItem from="1517415828501" duration="4701000" />
+      <workItem from="1517442162207" duration="5250000" />
+      <workItem from="1517526036907" duration="603000" />
+      <workItem from="1519421992241" duration="2999000" />
+      <workItem from="1519425462834" duration="146406000" />
+      <workItem from="1519842173044" duration="55228000" />
+      <workItem from="1520091133785" duration="7007000" />
+      <workItem from="1520129788982" duration="75953000" />
+      <workItem from="1520545606395" duration="3892000" />
+      <workItem from="1520639107409" duration="26167000" />
+      <workItem from="1520802982294" duration="9656000" />
+      <workItem from="1520820801026" duration="5009000" />
+      <workItem from="1520902043324" duration="16271000" />
+      <workItem from="1520986798863" duration="4150000" />
+      <workItem from="1521155844107" duration="25221000" />
+      <workItem from="1521375950198" duration="45000" />
+      <workItem from="1521376605018" duration="47090000" />
+      <workItem from="1521573424324" duration="8163000" />
+      <workItem from="1521643757848" duration="3703000" />
+      <workItem from="1521664799166" duration="594000" />
+      <workItem from="1521681549382" duration="122804000" />
+      <workItem from="1522444528706" duration="30713000" />
+      <workItem from="1522607140338" duration="582000" />
+      <workItem from="1522627205676" duration="7785000" />
+      <workItem from="1522687404744" duration="626000" />
+      <workItem from="1522706053955" duration="5518000" />
+      <workItem from="1522808016618" duration="702000" />
+      <workItem from="1522811586608" duration="1248000" />
+      <workItem from="1527902514128" duration="5951000" />
+      <workItem from="1527919631043" duration="3989000" />
+      <workItem from="1528683433895" duration="292000" />
+      <workItem from="1528683791960" duration="6546000" />
+      <workItem from="1534215806542" duration="606000" />
+      <workItem from="1534255565938" duration="21000" />
+      <workItem from="1534360613455" duration="8185000" />
+      <workItem from="1534445720855" duration="854000" />
+      <workItem from="1534460507829" duration="3665000" />
+      <workItem from="1534518113461" duration="4592000" />
+      <workItem from="1534526342505" duration="1230000" />
+      <workItem from="1534545067531" duration="3549000" />
+      <workItem from="1534960107249" duration="1980000" />
+      <workItem from="1535664429873" duration="653000" />
+      <workItem from="1535687888750" duration="2301000" />
+      <workItem from="1536373026791" duration="1121000" />
+      <workItem from="1540093923592" duration="1277000" />
+      <workItem from="1540141563200" duration="29891000" />
+      <workItem from="1540497813145" duration="8072000" />
+      <workItem from="1540735633215" duration="6892000" />
+      <workItem from="1540750199872" duration="330000" />
+      <workItem from="1540775242586" duration="57287000" />
+      <workItem from="1541874497549" duration="446000" />
+      <workItem from="1541960051362" duration="597000" />
+      <workItem from="1541972127751" duration="10283000" />
+      <workItem from="1542246165551" duration="11908000" />
+      <workItem from="1542326019820" duration="365000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="884740000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14427084" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32943678" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32943678" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997879" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32837406" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="25" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/dist/js/sweetalert2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="1173" column="146" selection-start-line="1173" selection-start-column="146" selection-end-line="1173" selection-end-column="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/teste.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/usuario_alterar_tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="111" selection-start-line="40" selection-start-column="111" selection-end-line="40" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/redefinirsenha/esqueceu_sua_senha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="110" column="26" lean-forward="true" selection-start-line="110" selection-start-column="26" selection-end-line="110" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/redefinirsenha/link_alteracao_senha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/redefinirsenha/senha_alterada.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="125" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/functions.php" />
+    <entry file="file://$USER_HOME$/Downloads/export (1).php" />
+    <entry file="file://$PROJECT_DIR$/application/views/redefinirsenha/alterar_senha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="992">
+          <caret line="62" column="51" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/chamados/exemplo_chamados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-467">
+          <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Usuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="25" selection-start-line="7" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="130" column="48" selection-start-line="130" selection-start-column="48" selection-end-line="130" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Admin_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/css/sweetalert2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5160">
+          <caret line="344" column="79" selection-start-line="344" selection-start-column="78" selection-end-line="344" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Redefinirsenha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/js/sb-admin.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sb-admin-2.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1845">
+          <caret line="123" column="25" selection-start-line="123" selection-start-column="25" selection-end-line="123" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/css/sb-admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/alterar_senha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="89" selection-start-line="50" selection-start-column="89" selection-end-line="50" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/meus_dados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="90" column="71" selection-start-line="90" selection-start-column="71" selection-end-line="90" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/gerenciar_admins.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="136" column="51" selection-start-line="136" selection-start-column="51" selection-end-line="136" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/categorias_list_tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="119" selection-start-line="11" selection-start-column="119" selection-end-line="11" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/usuarios_list_tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="144" selection-start-line="11" selection-start-column="144" selection-end-line="11" selection-end-column="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/usuario_cadastro_tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="72" lean-forward="true" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/categorias_cadastro_tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/cadastrar_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/alterar_dados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="63" column="29" selection-start-line="52" selection-start-column="20" selection-end-line="63" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/chamados/listar_chamados_usuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="128" column="66" selection-start-line="128" selection-start-column="66" selection-end-line="128" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Chamados_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2055">
+          <caret line="137" column="43" selection-start-line="137" selection-start-column="43" selection-end-line="137" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="97" selection-start-line="54" selection-start-column="97" selection-end-line="54" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Painel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/login/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="183" selection-start-line="183" selection-end-line="183" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/painel_tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/chamados/gerenciar_chamados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/chamados/responder_chamados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="131" selection-start-line="40" selection-start-column="131" selection-end-line="40" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/errors/cli/error_404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/errors/html/error_general.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-142" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="79" column="60" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/core/Loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13800">
+          <caret line="920" column="22" selection-start-line="920" selection-start-column="17" selection-end-line="920" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/chamados/detalhes_chamados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="38" selection-start-line="10" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/core/Exceptions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="130" column="95" selection-start-line="130" selection-start-column="95" selection-end-line="130" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/errors/html/error_404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="42" column="20" lean-forward="true" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Chamados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="146" column="21" selection-start-line="146" selection-start-column="21" selection-end-line="146" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/chamados/cadastrar_chamados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

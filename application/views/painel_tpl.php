@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-////$this->load->view('header.php');
+//$this->load->view('header.php');
 ?>
 
 <div class="content-wrapper">
@@ -8,9 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="#">Painel</a>
+                <a href="<?= site_url('painel/') ?>">Painel</a>
             </li>
-            <li class="breadcrumb-item active">Meu Painel</li>
+            <li class="breadcrumb-item active"></li>
         </ol>
         <?php if ($this->session->flashdata('success') != null) { ?>
             <div class="alert alert-success alert-dismissible" role="alert">
