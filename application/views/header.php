@@ -322,15 +322,6 @@
     </script>
 <?php } ?>
 
-<!--
-Mudar posição do menu do sistema
--->
-<script>
-    $(document).on('click', '#toggleNavPosition', function () {
-        $('body').toggleClass('fixed-nav');
-        $('nav').toggleClass('fixed-top static-top');
-    });
-</script>
 
 <!--
 Função para sair

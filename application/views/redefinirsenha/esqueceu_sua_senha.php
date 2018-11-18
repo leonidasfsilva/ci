@@ -1,4 +1,4 @@
-<?php //$this->load->view('header.php'); ?>
+<?php $this->load->view('header.php'); ?>
 
 <div class="container bg-dark">
     <div class="col-md-4 offset-md-4">

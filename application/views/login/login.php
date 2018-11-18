@@ -59,7 +59,7 @@
             <div class="card-footer">
                 <button type="submit" id="btnLogin" class="btn btn-outline-success btn-block font-weight-bold">
                     <span id="labelBtnLogin">Entrar</span>
-                     <i class="fa fa-sign-in fa-fw" id="i_static"></i> <i
+                    <i class="fa fa-sign-in fa-fw" id="i_static"></i> <i
                             class="fa fa-spinner fa-pulse fa-fw d-none" id="i_spinner"></i>
 
                 </button>
@@ -75,15 +75,15 @@
 
 <script>
 
-    $('#formLogin').submit( function(event) {
-            const form = this;
+    $('#formLogin').submit(function (event) {
+        const form = this;
 
         $('#i_static').addClass('d-none');
         $('#i_spinner').removeClass('d-none');
         $('#labelBtnLogin').html('Entrando...');
         event.preventDefault();
 
-        setTimeout( function () {
+        setTimeout(function () {
 
             form.submit();
         }, 1000);
@@ -189,12 +189,34 @@
         swal({
             position: 'top',
             type: 'error',
-            title: 'Token inválido!',
-            html: 'Você pode solicitar um novo token acessando a página de recuperação de senha.',
+            title: 'Link inválido!',
+            html: 'Você pode solicitar um novo link clicando no botão abaixo.',
             showConfirmButton: true,
             showCancelButton: true,
             reverseButtons: true,
-            confirmButtonText: '<i class="fa fa-exchange fa-fw"></i> Solicitar novo token ',
+            confirmButtonText: '<i class="fa fa-exchange fa-fw"></i> Novo link ',
+            cancelButtonText: '<i class="fa fa-times fa-fw"></i> Cancelar ',
+        }).then((result) => {
+            if (result.value) {
+                redefinirsenha();
+            } else {
+                window.location.replace('<?= site_url("login/") ?>');
+            }
+        })
+    </script>
+<?php } ?>
+
+<?php if (isset($tokenExpirado) == true) { ?>
+    <script>
+        swal({
+            position: 'top',
+            type: 'error',
+            title: 'Link expirado!',
+            html: 'Seu link de redefinição de senha está expirado.<br>Você pode solicitar um novo link clicando no botão abaixo.',
+            showConfirmButton: true,
+            showCancelButton: true,
+            reverseButtons: true,
+            confirmButtonText: '<i class="fa fa-exchange fa-fw"></i> Novo link ',
             cancelButtonText: '<i class="fa fa-times fa-fw"></i> Cancelar ',
         }).then((result) => {
             if (result.value) {
@@ -269,12 +291,12 @@ Função para redefinir senha via SweetAlert 2
             preConfirm: (email) => {
                 return new Promise((resolve) => {
                     setTimeout(() => {
-                        if (email === 'taken@example.com') {
-                            swal.showValidationError(
-                                'This email is already taken.'
-                            )
-                        }
-                        resolve()
+                        // if (email === 'taken@example.com') {
+                        //     swal.showValidationError(
+                        //         'This email is already taken.'
+                        //     )
+                        // }
+                        resolve();
                     }, 2000)
                 })
             },
@@ -286,13 +308,13 @@ Função para redefinir senha via SweetAlert 2
                         type: "POST",
                         url: "<?= site_url('redefinirsenha/gerartoken'); ?>",
                         data: {'usuarioemail': result.value}, // <--- THIS IS THE CHANGE
-                        dataType: 'html',
+                        dataType: 'json',
                         cache: false,
-                        success: function (resposta) {
+                        success: function (res) {
 
-                            var res = jQuery.parseJSON(resposta);
+                            // var res = jQuery.parseJSON(resposta);
 
-                            if (res.status === true) {
+                            if (res.validacao == true) {
                                 swal({
                                     position: 'top',
                                     type: 'success',
@@ -309,13 +331,13 @@ Função para redefinir senha via SweetAlert 2
                                     'verifique sua caixa de entrada ou pasta de <i>spam</i> e siga as instruções de recuperação.</p>',
                                 }).then((result) => {
                                     if (result.value) {
-                                        window.location.replace('<?= site_url() ?>' + 'redefinirsenha/verificartoken?token=' + res.token + '&id=' + res.id);
+                                        window.location.replace('<?= site_url() ?>' + 'redefinirsenha/verificacao?token=' + res.token + '&id=' + res.id);
                                     } else {
 
                                     }
                                 })
                             }
-                            if (res.status === false) {
+                            if (res.validacao == false) {
                                 swal({
                                     position: 'top',
                                     type: 'error',

@@ -12,6 +12,7 @@ class redefinirsenha extends CI_Controller
     public function index()
     {
         redirect(site_url('/login'));
+        //$this->load->view('redefinirsenha/esqueceu_sua_senha');
     }
 
     public function gerarToken()
@@ -34,19 +35,83 @@ class redefinirsenha extends CI_Controller
             if ($query->num_rows() > 0) {
                 $result = $query->row();
 
+                $token = sha1(uniqid(rand(), true));
+
                 $data = array(
-                    'token' => sha1($result->idadministrador . $result->administradorsenha),
-                    'email' => $result->administradoremail,
-                    'id' => $result->idadministrador,
-                    'status' => true
+                    'token' => $token,
+                    'email_usuario' => $result->administradoremail,
+                    'id_usuario' => $result->idadministrador
                 );
 
-                echo json_encode($data, JSON_PRETTY_PRINT);
+                $this->Admin_model->gravaToken($data);
+                $last_id = $this->db->insert_id();
+
+                $ajax = array(
+                    'token' => $token,
+                    'email' => $result->administradoremail,
+                    'id' => $last_id,
+                    'validacao' => true
+                );
+
+                //aqui entra o MAIL() para enviar o link de recuperação com o token gerado para o usuário
+
+                /*
+                $link = 'redefinirsenha/verificacao?token='.$tokenReal.'&id='.$id;
+                $date = date("d/m/Y h:i");
+                $ip = getenv("REMOTE_ADDR");
+                $navegador = $_SERVER['HTTP_USER_AGENT'];
+                $nomeremetente = $rs->administradornome;
+                $emailremetente = $rs->administradoremail;
+
+                //AUTO RESPOSTA
+                $headers_ = "MIME-Version: 1.0\r\n";
+                $headers_ .= "Content-type: text/html; charset=utf-8\r\n";
+                $headers_ .= "From: naoresponda@mxcode.net\r\n";
+                $assunto_resposta = "Redefinição de senha";
+
+                $msg_resposta = '
+                <p>Olá, ' . $nomeremetente . '!</p>
+                <p>Recebemos um pedido para alteração de sua senha de cadastro.
+                <br />
+                Origem da solicitação:
+                <br />
+                IP: '.$ip.'
+                <br />
+                Navegador: '.$navegador.'
+                <br />
+                Data e hora: '.$date.'
+                <br />
+                <br />
+                Caso você tenha solicitado a troca de sua senha, segue o link para redefinir sua senha:
+                <br />
+                <br />
+                <a href="https://mxcode.net/'.$link.'" target="_blank"><strong>Clique aqui para redefinir sua senha</strong></a><br /></p>
+                <br />
+                <br />
+                <p>Por questões de segurança, este link só estará válido por alguns minutos, caso seu link tenha expirado, faça uma nova solicitação clicando no botão <strong>Esqueci minha senha.</strong></a>
+                <br />
+                Caso não tenha sido você, por favor, desconsidere este email, nenhuma outra ação é necessária. Não se preocupe, sua conta está segura.
+                <br />
+                <p>Caso necessite de suporte específico, contate-nos em <a href="mailto:suporte@mxcode.net?Subject=Solicitação de suporte" target="_top"><strong>suporte@mxcode.net</strong></a>
+                <br />
+                <p>Atenciosamente,</p>
+                <h3><strong>Equipe MX Code.</strong></h3>
+                <a href="https://mxcode.net" target="_blank"><strong>https://mxcode.net</strong></a><br />
+                <br />_________________________________________________________________________
+                <br />
+                Não é necessário responder este e-mail, mensagem automática.';
+
+                mail($emailremetente, $assunto_resposta, $msg_resposta, $headers_);
+
+                 */
+
+                //por hora, para efeito de teste, estou retornando o token para o aJax
+                echo json_encode($ajax, JSON_PRETTY_PRINT);
 
             } else {
 
                 $data = array(
-                    'status' => false,
+                    'validacao' => false,
                     'email' => $usuarioemail
                 );
 
@@ -58,27 +123,49 @@ class redefinirsenha extends CI_Controller
 
     }
 
-    public function verificarToken()
+    public function verificacao()
     {
         $this->load->model('Admin_model');
         $tokenUsuario = $this->input->get('token');
-        $idusuario = $this->input->get('id');
+        $id = $this->input->get('id');
 
-        if ($idusuario != null) {
-            $query = $this->Admin_model->getDadosAdminById($idusuario);
+        if ($id != null) {
+            $query = $this->Admin_model->validaTokenById($id);
 
             if ($query->num_rows() > 0) {
                 $result = $query->row();
-                $tokenReal = sha1($result->idadministrador . $result->administradorsenha);
+                $tokenReal = $result->token;
 
                 if ($tokenUsuario != null && $tokenUsuario == $tokenReal) {
-                    $data = array(
-                        'id' => $result->idadministrador,
-                        'nome' => $result->administradornome,
-                        'token' => $tokenReal
-                    );
 
-                    $this->load->view('redefinirsenha/alterar_senha', $data);
+                    $query = $this->Admin_model->verificaValidadeToken($id);
+                    $result = $query->row();
+
+                    //tempo de validade do link
+                    $validade = $result->validade;
+
+                    if ($validade < 60) {
+
+                        $qr = $this->Admin_model->getDadosAdminById($result->id_usuario);
+                        $rs = $qr->row();
+
+                        $data = array(
+                            'id' => $id,
+                            'nome' => $rs->administradornome,
+                            'data' => $result->data_solicitacao,
+                            'token' => $tokenReal
+                        );
+
+                        $this->load->view('redefinirsenha/alterar_senha', $data);
+
+                    } else {
+
+                        $data = array(
+                            'tokenExpirado' => true
+                        );
+                        $this->load->view('login/login', $data);
+                        $this->Admin_model->invalidaToken($id);
+                    }
 
                 } else {
                     $data2 = array(
@@ -104,15 +191,16 @@ class redefinirsenha extends CI_Controller
     public function alterarSenha()
     {
         $this->load->model('Admin_model');
-        $idusuario = (int)$this->input->post('id');
+        $id = (int)$this->input->post('id');
         $token = $this->input->post('token');
         $novasenha = $this->input->post('novasenha');
         $repitasenha = $this->input->post('repitasenha');
 
-        if (($token != null) && ($idusuario != null)) {
-            $query = $this->Admin_model->getDadosAdminById($idusuario);
-            $result = $query->row();
-            $tokenReal = sha1($result->idadministrador . $result->administradorsenha);
+        if (($token != null) && ($id != null)) {
+
+            $queryToken = $this->Admin_model->validaTokenById($id);
+            $resultToken = $queryToken->row();
+            $tokenReal = $resultToken->token;
 
             if ($tokenReal == $token) {
                 $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible small font-weight-bold" role="alert">
@@ -120,9 +208,12 @@ class redefinirsenha extends CI_Controller
                 $this->form_validation->set_rules('novasenha', '"Nova senha"', 'required|min_length[6]');
                 $this->form_validation->set_rules('repitasenha', '"Confirme nova senha"', 'required|min_length[6]');
 
+                $query = $this->Admin_model->getDadosAdminById($resultToken->id_usuario);
+                $result = $query->row();
+
                 if ($this->form_validation->run() == FALSE) {
                     $data = array(
-                        'id' => $result->idadministrador,
+                        'id' => $id,
                         'nome' => $result->administradornome,
                         'token' => $token
                     );
@@ -136,18 +227,19 @@ class redefinirsenha extends CI_Controller
                         );
 
                         $data2 = array(
-                            'id' => $result->idadministrador,
+                            'id' => $id,
                             'nome' => $result->administradornome,
                             'senhaAlterada' => true
                         );
 
-                        $this->Admin_model->atualizaAdmin($idusuario, $data1);
+                        $this->Admin_model->atualizaAdmin($resultToken->id_usuario, $data1);
+                        $this->Admin_model->invalidaToken($id);
 
                         $this->load->view('login/login', $data2);
 
                     } elseif (($novasenha != null) && ($repitasenha != null) && ($novasenha != $repitasenha)) {
                         $data3 = array(
-                            'id' => $result->idadministrador,
+                            'id' => $id,
                             'nome' => $result->administradornome,
                             'token' => $token,
                             'senhaAlterada' => false

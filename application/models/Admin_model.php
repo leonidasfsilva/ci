@@ -1,21 +1,26 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_model extends CI_Model {
+class Admin_model extends CI_Model
+{
 
-    function getTodosAdmins(){
+    function getTodosAdmins()
+    {
         return $this->db->get('administrador');
     }
 
-    function getTodosStatus(){
+    function getTodosStatus()
+    {
         return $this->db->get('statusadministrador');
     }
 
-    function getTodosNiveis(){
+    function getTodosNiveis()
+    {
         return $this->db->get('niveladministrador');
     }
 
-    function getAdmin($idadministrador){
+    function getAdmin($idadministrador)
+    {
         $idadministrador = (int)$idadministrador;
         return $this->db->query
         (
@@ -26,14 +31,16 @@ class Admin_model extends CI_Model {
         );
     }
 
-    function getStatusAdmin($idcategoria){
+    function getStatusAdmin($idcategoria)
+    {
         $idcategoria = (int)$idcategoria;
         $this->db->where('idcategoria', $idcategoria);
         return $this->db->get('categoria');
 
     }
 
-    function getStatusAdminById($idadministrador){
+    function getStatusAdminById($idadministrador)
+    {
         $idadministrador = (int)$idadministrador;
         $this->db
             ->select('descricaostatus as status')
@@ -43,33 +50,68 @@ class Admin_model extends CI_Model {
         return $this->db->get();
     }
 
-    function getDadosAdminByEmail($administradoremail){
+    function getDadosAdminByEmail($administradoremail)
+    {
         $this->db->where('administradoremail', $administradoremail);
         return $this->db->get('administrador');
-
     }
 
-    function getDadosAdminById($idadministrador){
+    function getDadosAdminById($idadministrador)
+    {
         $this->db->where('idadministrador', $idadministrador);
         return $this->db->get('administrador');
-
     }
 
-    function cadastraAdmin($data){
+    function cadastraAdmin($data)
+    {
         $this->db->insert('administrador', $data);
-
     }
 
-    function atualizaAdmin($id, $data){
+    function atualizaAdmin($id, $data)
+    {
         $this->db->where('idadministrador', $id);
         $this->db->update('administrador', $data);
     }
 
-    function excluiAdmin($id){
+    function excluiAdmin($id)
+    {
         $this->db->where('idadministrador', $id);
         $this->db->delete('administrador');
-
     }
 
+    function gravaToken($data)
+    {
+        $this->db->insert('recuperacao_senha', $data);
+    }
+
+    function validaTokenById($id)
+    {
+        $this->db
+            ->where('id_recuperacao_senha', $id)
+            ->where('status', 1);
+        return $this->db->get('recuperacao_senha');
+    }
+
+    function verificaValidadeToken($id)
+    {
+        $this->db
+            ->select('*, TIMESTAMPDIFF(MINUTE , data_solicitacao, CURRENT_TIMESTAMP) AS validade')
+            ->where('id_recuperacao_senha', $id);
+        return $this->db->get('recuperacao_senha');
+    }
+
+    function apagaToken($id)
+    {
+        $this->db->where('id_recuperacao_senha', $id);
+        $this->db->delete('recuperacao_senha');
+    }
+
+    function invalidaToken($id)
+    {
+        $this->db
+            ->set('status', 0)
+            ->where('id_recuperacao_senha', $id)
+            ->update('recuperacao_senha');
+    }
 
 }
