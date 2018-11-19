@@ -1671,7 +1671,7 @@ var Timer = function Timer(callback, delay) {
 
 var defaultInputValidators = {
   email: function email(string, extraParams) {
-    return /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9-]{2,24}$/.test(string) ? Promise.resolve() : Promise.reject(extraParams && extraParams.validationMessage ? extraParams.validationMessage : 'Invalid email address');
+    return /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9-]{2,24}$/.test(string) ? Promise.resolve() : Promise.reject(extraParams && extraParams.validationMessage ? extraParams.validationMessage : 'Endereço de email inválido');
   },
   url: function url(string, extraParams) {
     // taken from https://stackoverflow.com/a/3809435

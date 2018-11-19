@@ -23,25 +23,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$allowed_domains = array('10.0.1.200/ci','localhost/ci', '127.0.0.1/ci');
-$default_domain  = '10.0.1.200/ci';
+$allowed_domains = array('10.0.1.200/ci', 'localhost/ci', '127.0.0.1/ci');
+$default_domain = 'mxcode.in/ci';
 
-if (in_array($_SERVER['HTTP_HOST'], $allowed_domains, TRUE))
-{
+if (in_array($_SERVER['HTTP_HOST'], $allowed_domains)) {
     $domain = $_SERVER['HTTP_HOST'];
-}
-else
-{
+} else {
     $domain = $default_domain;
 }
 
-if ( ! empty($_SERVER['HTTPS']))
-{
-    $config['base_url'] = 'https://'.$domain;
-}
-else
-{
-    $config['base_url'] = 'http://'.$domain;
+if (!empty($_SERVER['HTTPS'])) {
+    $config['base_url'] = 'https://' . $domain;
+} else {
+    $config['base_url'] = 'http://' . $domain;
 }
 /*
 |--------------------------------------------------------------------------
@@ -70,7 +64,7 @@ $config['index_page'] = '';
 |
 | WARNING: If you set this to 'PATH_INFO', URIs will always be URL-decoded!
 */
-$config['uri_protocol']	= 'REQUEST_URI';
+$config['uri_protocol'] = 'REQUEST_URI';
 
 /*
 |--------------------------------------------------------------------------
@@ -94,7 +88,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'portuguese-brazilian';
+$config['language'] = 'portuguese-brazilian';
 
 /*
 |--------------------------------------------------------------------------
@@ -418,11 +412,11 @@ $config['sess_regenerate_destroy'] = FALSE;
 |       'cookie_httponly') will also affect sessions.
 |
 */
-$config['cookie_prefix']	= '';
-$config['cookie_domain']	= '';
-$config['cookie_path']		= '/';
-$config['cookie_secure']	= FALSE;
-$config['cookie_httponly'] 	= FALSE;
+$config['cookie_prefix'] = '';
+$config['cookie_domain'] = '';
+$config['cookie_path'] = '/';
+$config['cookie_secure'] = FALSE;
+$config['cookie_httponly'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------

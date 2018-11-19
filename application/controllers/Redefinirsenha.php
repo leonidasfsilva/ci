@@ -55,13 +55,13 @@ class redefinirsenha extends CI_Controller
 
                 //aqui entra o MAIL() para enviar o link de recuperação com o token gerado para o usuário
 
-                /*
-                $link = 'redefinirsenha/verificacao?token='.$tokenReal.'&id='.$id;
+
+                $link = site_url('redefinirsenha/verificacao?token='.$token.'&id='.$last_id);
                 $date = date("d/m/Y h:i");
                 $ip = getenv("REMOTE_ADDR");
                 $navegador = $_SERVER['HTTP_USER_AGENT'];
-                $nomeremetente = $rs->administradornome;
-                $emailremetente = $rs->administradoremail;
+                $nomeremetente = $result->administradornome;
+                $emailremetente = $result->administradoremail;
 
                 //AUTO RESPOSTA
                 $headers_ = "MIME-Version: 1.0\r\n";
@@ -71,7 +71,7 @@ class redefinirsenha extends CI_Controller
 
                 $msg_resposta = '
                 <p>Olá, ' . $nomeremetente . '!</p>
-                <p>Recebemos um pedido para alteração de sua senha de cadastro.
+                <p>Recebemos um pedido para alteração de sua senha de cadastro em nosso sistema.
                 <br />
                 Origem da solicitação:
                 <br />
@@ -85,25 +85,22 @@ class redefinirsenha extends CI_Controller
                 Caso você tenha solicitado a troca de sua senha, segue o link para redefinir sua senha:
                 <br />
                 <br />
-                <a href="https://mxcode.net/'.$link.'" target="_blank"><strong>Clique aqui para redefinir sua senha</strong></a><br /></p>
+                <a href="'.$link.'" target="_blank"><strong>Clique aqui para redefinir sua senha</strong></a>
                 <br />
+                <p>Por questões de segurança, este link só estará válido por alguns minutos, caso seu link tenha expirado, faça uma nova solicitação clicando no botão <strong>Esqueci minha senha</strong></a> na página inicial do sistema.
                 <br />
-                <p>Por questões de segurança, este link só estará válido por alguns minutos, caso seu link tenha expirado, faça uma nova solicitação clicando no botão <strong>Esqueci minha senha.</strong></a>
-                <br />
-                Caso não tenha sido você, por favor, desconsidere este email, nenhuma outra ação é necessária. Não se preocupe, sua conta está segura.
+                Caso não tenha solicitado a troca de sua senha, por favor, desconsidere este email, nenhuma outra ação é necessária. Não se preocupe, sua conta está segura.
                 <br />
                 <p>Caso necessite de suporte específico, contate-nos em <a href="mailto:suporte@mxcode.net?Subject=Solicitação de suporte" target="_top"><strong>suporte@mxcode.net</strong></a>
                 <br />
                 <p>Atenciosamente,</p>
-                <h3><strong>Equipe MX Code.</strong></h3>
+                <h3><strong>Equipe MX Code Sistemas.</strong></h3>
                 <a href="https://mxcode.net" target="_blank"><strong>https://mxcode.net</strong></a><br />
                 <br />_________________________________________________________________________
                 <br />
                 Não é necessário responder este e-mail, mensagem automática.';
 
                 mail($emailremetente, $assunto_resposta, $msg_resposta, $headers_);
-
-                 */
 
                 //por hora, para efeito de teste, estou retornando o token para o aJax
                 echo json_encode($ajax, JSON_PRETTY_PRINT);
@@ -142,9 +139,9 @@ class redefinirsenha extends CI_Controller
                     $result = $query->row();
 
                     //tempo de validade do link
-                    $validade = $result->validade;
+                    $validade = 20;
 
-                    if ($validade < 60) {
+                    if ($result->validade < $validade) {
 
                         $qr = $this->Admin_model->getDadosAdminById($result->id_usuario);
                         $rs = $qr->row();
