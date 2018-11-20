@@ -61,7 +61,6 @@
                     <span id="labelBtnLogin">Entrar</span>
                     <i class="fa fa-sign-in fa-fw" id="i_static"></i> <i
                             class="fa fa-spinner fa-pulse fa-fw d-none" id="i_spinner"></i>
-
                 </button>
                 </form>
             </div>
@@ -318,9 +317,9 @@ Função para redefinir senha via SweetAlert 2
                                 swal({
                                     position: 'top',
                                     type: 'success',
-                                    title: 'E-mail enviado',
+                                    title: 'Link enviado!',
                                     showConfirmButton: true,
-                                    showCancelButton: true,
+                                    showCancelButton: false,
                                     confirmButtonText: '<i class="fa fa-check fa-fw"></i> OK ',
                                     cancelButtonText: '<i class="fa fa-times fa-fw"></i> Fechar ',
                                     reverseButtons: true,
@@ -331,7 +330,8 @@ Função para redefinir senha via SweetAlert 2
                                     'verifique sua caixa de entrada ou pasta de <i>spam</i> e siga as instruções de recuperação.</p>',
                                 }).then((result) => {
                                     if (result.value) {
-                                        window.location.replace('<?= site_url() ?>' + 'redefinirsenha/verificacao?token=' + res.token + '&id=' + res.id);
+                                       // window.location.replace('<?= site_url() ?>' + 'redefinirsenha/verificacao?token=' + res.token + '&id=' + res.id);
+                                        window.location.replace('<?= site_url("login/") ?>');
                                     } else {
 
                                     }
