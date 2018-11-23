@@ -96,7 +96,7 @@ class admin extends MY_ControllerLogin
         );
 
         $this->Admin_model->atualizaAdmin($idadministrador, $data);
-        $this->session->set_flashdata('alert', 'Seu cadastro foi atualizado com sucesso!');
+        $this->session->set_flashdata('success', 'Seu cadastro foi atualizado com sucesso!');
         redirect('painel/');
 
     }

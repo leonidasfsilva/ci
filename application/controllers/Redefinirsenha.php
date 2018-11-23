@@ -41,7 +41,7 @@ class redefinirsenha extends CI_Controller
                     $result = $query->row();
 
                     //$token = sha1(uniqid(rand('AaBbCcDdEeFfGgHh1234567890'), 80));
-                    $token = ((str_shuffle('1234567890AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyWwZz1234567890AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyWwZz')));
+                    $token = ((str_shuffle('1234567890AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyWwZz1234567890')));
 
                     $data = array(
                         'token' => $token,
@@ -131,7 +131,7 @@ class redefinirsenha extends CI_Controller
     {
         if ($this->session->userdata('logado') == true)
         {
-            redirect('/painel');
+            redirect('/admin/alterarsenha/');
 
         } else {
             $this->load->model('Admin_model');

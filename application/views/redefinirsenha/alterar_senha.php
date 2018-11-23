@@ -49,8 +49,8 @@
                     </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-outline-primary btn-block font-weight-bold">Cadastrar <i class="fa fa-check fa-fw"></i></button>
                 <a href="<?=site_url('/login')?>" class="btn btn-outline-secondary btn-block font-weight-bold">Cancelar <i class="fa fa-times fa-fw"></i></a>
+                <button type="submit" class="btn btn-outline-primary btn-block font-weight-bold">Cadastrar <i class="fa fa-check fa-fw"></i></button>
             </div>
             </form>
         </div>

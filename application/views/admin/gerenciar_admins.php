@@ -67,18 +67,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <thead>
                         <tr>
                             <th>Usuário</th>
+                            <th>Email</th>
                             <th>Nível</th>
                             <th>Status</th>
-                            <th></th>
                         </tr>
                         </thead>
 
                         <tbody>
                         <?php foreach ($usuarios->result() as $users) { ?>
-                            <tr>
+                            <tr onclick="location.href='<?= site_url('admin/alterarDados/' . $users->idadministrador) ?>'"
+                                style="cursor: pointer">
 
                                 <td>
                                     <?= $users->administradornome ?>
+                                </td>
+
+                                <td>
+                                    <?= $users->administradoremail ?>
                                 </td>
 
                                 <?php foreach ($nivel->result() as $nv) { ?>
@@ -94,34 +99,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <?php foreach ($status->result() as $st) { ?>
                                     <?php if ($st->idstatusadministrador == $users->statusadministrador_id) { ?>
                                         <?php if ($st->idstatusadministrador == 1) { ?>
-                                            <td class="alert alert-success">
+                                            <td class="alert bg-success font-weight-bold">
                                                 <?= $st->descricaostatus ?>
                                             </td>
                                         <?php } ?>
 
                                         <?php if ($st->idstatusadministrador == 2) { ?>
-                                            <td class="alert alert-warning">
+                                            <td class="alert bg-warning font-weight-bold">
                                                 <?= $st->descricaostatus ?>
                                             </td>
                                         <?php } ?>
 
                                         <?php if ($st->idstatusadministrador == 3) { ?>
-                                            <td class="alert alert-danger">
+                                            <td class="alert bg-danger font-weight-bold">
                                                 <?= $st->descricaostatus ?>
                                             </td>
                                         <?php } ?>
                                     <?php } ?>
-
                                 <?php } ?>
-
-                                <td>
-                                    <a href="<?= site_url('admin/alterarDados/' . $users->idadministrador) ?>"
-                                       class="btn btn-sm btn-outline-warning"><i
-                                                class="fa fa-pencil-square-o fa-fw"></i> Alterar</a>
-                                    <a href="#" data-toggle="modal" data-target="#excluirModal"
-                                       admin="<?= $users->idadministrador ?>"
-                                       class="btn btn-sm btn-outline-danger"><i class="fa fa-ban fa-fw"></i> Excluir</a>
-                                </td>
                             </tr>
                         <?php } ?>
                         </tbody>
@@ -132,45 +127,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php } ?>
             </div>
         </div>
-
-        <div class="modal fade" id="excluirModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-             aria-hidden="true">
-            <form action="<?= site_url('admin/excluir') ?>" method="post">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header bg-danger">
-                            <h5 class="modal-title" id="exampleModalLabel">Confirma exclusão?</h5>
-                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <input type="hidden" id="idAdministrador" name="admin" value=""/>
-                            <p>Deseja realmente excluir este registro?</p>
-                            <p><strong>ATENÇÃO!</strong> Esta ação não poderá ser desfeita!</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-outline-secondary btn-sm" type="button" data-dismiss="modal">
-                                <i class="fa fa-fw fa-times"></i> Cancelar
-                            </button>
-                            <button class="btn btn-outline-danger btn-sm"><i class="fa fa-fw fa-trash-o"></i>
-                                Excluir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
     </div>
     <?php $this->load->view('footer.php'); ?>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(document).on('click', 'a', function (event) {
-                var admin = $(this).attr('admin');
-                $('#idAdministrador').val(admin);
-            });
-        });
-    </script>
 </div>
 
 </body>
