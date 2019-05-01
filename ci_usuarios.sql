@@ -39,8 +39,7 @@ CREATE TABLE `administrador` (
 --
 
 INSERT INTO `administrador` (`idadministrador`, `administradoremail`, `administradornome`, `administradorsenha`, `administradorstatus`) VALUES
-(1, 'leonidas.f.silva@hotmail.com', 'Leônidas Ferreira', '202cb962ac59075b964b07152d234b70', 'ativo'),
-(2, 'admin@admin.com', 'Administrador', '202cb962ac59075b964b07152d234b70', 'ativo');
+(1, 'admin@admin.com', 'Administrador', '202cb962ac59075b964b07152d234b70', 'ativo');
 
 -- --------------------------------------------------------
 
